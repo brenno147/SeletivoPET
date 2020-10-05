@@ -6,7 +6,7 @@ const Homepage = ({navigation}) => {
     return(
         <View style={styles.container}>
             <Text style={styles.text}>Olá, profissional da saúde!{"\n"} Selecione um dos menus para começarmos</Text>
-            <View style ={styles.buttonContainer}>
+            <View style={styles.buttonContainer}>
                 <SimpleButton textoPrincipal="Calculadora de risco (Gail)" navigation = {() => navigation.navigate("Elegibilidade1")}/>
             </View>
             <SimpleButton textoPrincipal="Acesso a informação" navigation = {() => navigation.navigate("InformacaoMenu")}/>

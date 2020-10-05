@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const Poster = ({value1, value2, value3, value4, value5, value6}) => {
     return(
-        <TouchableOpacity style = {styles.buttonContainer} onPress = {
+        <TouchableOpacity style = {styles.buttonContainer} onPress = {() =>{
             axios.post('https://bcrisktool.cancer.gov/calculate', {
                 'cancerAndRadiationHistory': '1', 
                 'geneticMakeup': '1',
@@ -14,10 +14,8 @@ const Poster = ({value1, value2, value3, value4, value5, value6}) => {
                 'age_period': value4,
                 'childbirth_age': value5,
                 'relatives': value6
-          })
-          .then(function (response) {
-            console.log(response);
-          })}>
+          })}
+          }>
                 <Text style = {styles.buttonText}>Submit</Text>
         </TouchableOpacity>
     )
@@ -40,10 +38,6 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         flexDirection: "row",
-    },
-    picker:{
-        width: 200,
-        height: 500
     },
     text: {
         fontSize:22,
